@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/liste_sayfam"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="programci.lezzetim.listeayrinti">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="13dp"
+            android:layout_toStartOf="@+id/btn_update"
+            android:background="@android:color/background_light"
+            android:text="DELETE"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
+            android:background="@android:color/background_light"
+            android:text="UPDATE"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:titleTextColor="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/rl_m"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/iv"
+            android:editable="false"
+            tools:focusable="false">
+
+            <TextView
+                android:id="@+id/txt_mlz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="48dp"
+                android:text="Malzemeler :"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtmlz"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="34dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                tools:focusable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_b"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_a">
+
+            <TextView
+                android:id="@+id/txt_begeni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="47dp"
+                android:text="Beğenilme :"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtlike"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="35dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_a"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_t">
+
+            <EditText
+                android:id="@+id/txtacik"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/txt_acik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="45dp"
+                android:text="Açıklama :"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_t"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_p">
+
+            <TextView
+                android:id="@+id/txt_tarif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="46dp"
+                android:text="Tarif :"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txttarif"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="34dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_p"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_k">
+
+            <TextView
+                android:id="@+id/txt_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="46dp"
+                android:text="Pişirme Süresi :"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtsayi"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="35dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_k"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_m">
+
+            <TextView
+                android:id="@+id/txt_kisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="47dp"
+                android:text="Kaç Kişilik :"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtkisi"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="34dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_d"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/btn_yes"
+                android:background="@color/colorPrimary"
+                android:text="NO"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btn_no"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrimary"
+                android:text="YES"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
